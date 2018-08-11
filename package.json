@@ -1,7 +1,8 @@
 {
   "name": "hungrybear",
   "version": "1.0.0",
-  "description": "HungryBear","dependencies": {
+  "description": "HungryBear",
+  "dependencies": {
     "aos": "^2.3.0",
     "async": "^2.6.1",
     "aws-sdk": "^2.268.1",
