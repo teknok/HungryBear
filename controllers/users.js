@@ -1,6 +1,6 @@
 'use-strict'
 
-module.exports = function(_, passport,async, city){
+module.exports = function(_, passport,async, city, restro){
     return{
         SetRouting: function(router){
             router.get('/',this.indexPage);
@@ -48,7 +48,17 @@ module.exports = function(_, passport,async, city){
             res.render('admin/city')
         },
         adminrestro: function(req,res){
+            const newrestro = new restro();
+            newrestro.name = req.body.name;
+            newrestro.city = req.body.city;
+            newrestro.state = req.body.state;
+            newrestro.country = req.body.country;
+            newrestro.image = req.body.upload;
 
+            console.log(newrestro.name);
+            newrestro.save((err)=>{
+                res.render('admin/restro');
+            })
         },
         getAdminRestro:function(req,res){
             res.render('admin/restro')
@@ -80,7 +90,17 @@ module.exports = function(_, passport,async, city){
 
         },
         getRestro: function(req,res){
-            res.render('restro',{title: 'HungryBear', restro:req.params.restro});
+            async.parallel([
+                function(callback){
+                    restro.findOne({'name': req.params.restro})
+                        .exec((err,result)=>{
+                            callback(err,result);
+                        })
+                }
+            ],(err,results)=>{
+                const result1 = results[0];
+                res.render('restro',{title: 'HungryBear', restro:req.params.restro, data: result1});            });
+            
         }
     }
 }
