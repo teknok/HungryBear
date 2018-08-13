@@ -12,7 +12,7 @@ const flash = require('connect-flash');
 const passport = require('passport');
 
 
-container.resolve(function (_, users , dash, admin) {
+container.resolve(function (_, users) {
 
     mongoose.Promise = global.Promise;
     mongoose.connect('mongodb://localhost/hb');
@@ -25,7 +25,6 @@ container.resolve(function (_, users , dash, admin) {
             console.log("Server started on port 3000!!!");
         });
         ConfigureExpress(app);
-
         //Setup Router
         const router = require('express-promise-router')();
         users.SetRouting(router);
@@ -33,7 +32,7 @@ container.resolve(function (_, users , dash, admin) {
     }
 
     function ConfigureExpress(app) {
-        app.use(express.static('public'));
+        app.use(express.static(__dirname + '/public'));
         app.use(cookieParser());
         app.set('view engine', 'ejs');
         app.use(bodyParser.json());
