@@ -10,6 +10,7 @@ const simpleDependancies = [
     ['formidable','formidable'], //A Node.js module for parsing form data, especially file uploads.
     ['async','async'],
     ['city','./models/city'],
+    ['restro', './models/restro'],
 ];
 
 simpleDependancies.forEach(function(val){
