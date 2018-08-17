@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const restroSchema = mongoose.Schema({
+    username: {type: String, unique: true},
     name: {type: String, unique:true},
     city: {type: String, unique: true},
     state: {type: String, unique:true},

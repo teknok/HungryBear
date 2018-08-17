@@ -49,13 +49,14 @@ module.exports = function(_, passport,async, city, restro){
         },
         adminrestro: function(req,res){
             const newrestro = new restro();
+            newrestro.username = req.body.username;
             newrestro.name = req.body.name;
             newrestro.city = req.body.city;
             newrestro.state = req.body.state;
             newrestro.country = req.body.country;
             newrestro.image = req.body.upload;
 
-            console.log(newrestro.name);
+            console.log(newrestro.username);
             newrestro.save((err)=>{
                 res.render('admin/restro');
             })
@@ -75,7 +76,8 @@ module.exports = function(_, passport,async, city, restro){
                             "name": req.body.name,
                             $push: {
                                 "restro": {
-                                    name: req.body.restro,
+                                    name: req.body.restroname,
+                                    username: req.body.restro,
                                     image: req.body.restroImage
                                 }
                             }
@@ -92,15 +94,15 @@ module.exports = function(_, passport,async, city, restro){
         getRestro: function(req,res){
             async.parallel([
                 function(callback){
-                    restro.findOne({'name': req.params.restro})
+                    restro.findOne({'username': req.params.restro})
                         .exec((err,result)=>{
                             callback(err,result);
                         })
                 }
             ],(err,results)=>{
                 const result1 = results[0];
-                res.render('restro',{title: 'HungryBear', restro:req.params.restro, data: result1});            });
-            
+                res.render('restro',{title: 'HungryBear', restro:req.params.restro, data: result1});            
+            });
         }
     }
 }

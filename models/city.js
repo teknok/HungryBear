@@ -8,8 +8,9 @@ const citySchema = mongoose.Schema({
     num: {type: String, unique: true},
     image: {type: String, unique: true},
     restro: [{
+        username: {type: String, default: ''},
+        name: {type: String, default: ''},
         restroId: {type: mongoose.Schema.Types.ObjectId , ref: 'City'},
-        name : {type:String, default: ''},
         image: {type:String, default: ''}
     }],
 });
