@@ -69,7 +69,7 @@ textarea.form-control {
 
 .btn.btn-outline-primary {
   border-width: 2px;
-  color: #fdb44b;
+  color: #32CD32;
 }
 
 .btn.btn-outline-primary:hover, .btn.btn-outline-primary:focus, .btn.btn-outline-primary:active {
@@ -169,8 +169,7 @@ textarea.form-control {
 
 /* Site Header */
 .site-header {
-  padding: 3em 30px;
-  position: absolute;
+  padding: 2em 30px;
   top: 0;
   z-index: 100;
   width: 100%;
@@ -194,14 +193,14 @@ textarea.form-control {
 }
 
 .site-header .heading {
-  color: #fff;
+  color: rgb(78, 78, 78);
 }
 
 .site-header.scrolled {
   position: fixed;
   padding: 1em 30px;
   top: 0;
-  background: #fff;
+  background: rgb(78, 78, 78);
   -webkit-transition: .0s all ease;
   -o-transition: .0s all ease;
   transition: .0s all ease;
@@ -299,7 +298,7 @@ textarea.form-control {
 
 .section-heading .small-sub-heading {
   font-size: 14px;
-  color: #fdb44b;
+  color: #32CD32;
 }
 
 @media (min-width: 992px) {
@@ -372,7 +371,7 @@ textarea.form-control {
 .site-tab-nav li a.active {
   color: black;
   background: none;
-  border-bottom: 2px solid #fdb44b;
+  border-bottom: 2px solid #32CD32;
 }
 
 .site-tab-nav, .nav-pills {
@@ -451,7 +450,7 @@ textarea.form-control {
 }
 
 .menu-food-item .price strong {
-  color: #fdb44b;
+  color: #32CD32;
   font-size: 20px;
 }
 
@@ -475,7 +474,7 @@ textarea.form-control {
 }
 
 .footer-contact-widget .contact-email {
-  color: #fdb44b;
+  color: #32CD32;
 }
 
 .footer-contact-widget .contact-phone {
@@ -519,7 +518,7 @@ textarea.form-control {
 
 .custom-icon {
   font-size: 70px;
-  color: #fdb44b;
+  color: #32CD32;
 }
 
 .form-subscribe .form-group {
@@ -554,7 +553,7 @@ textarea.form-control {
   display: inline-block;
   position: relative;
   margin-bottom: 30px;
-  background: #fdb44b;
+  background: #32CD32;
 }
 
 .feature-icon .icon > span {
@@ -651,7 +650,7 @@ textarea.form-control {
 }
 
 .owl-carousel.centernonloop .owl-dots .owl-dot.active {
-  background: #fdb44b;
+  background: #32CD32;
 }
 
 .owl-carousel.centernonloop .owl-dots .owl-dot:active, .owl-carousel.centernonloop .owl-dots .owl-dot:focus {
@@ -788,11 +787,11 @@ textarea.form-control {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  background: #fdb44b;
+  background: #32CD32;
 }
 
 .owl-carousel.home-slider-loop-false .owl-dots .owl-dot.active {
-  border: 2px solid #fdb44b;
+  border: 2px solid #32CD32;
 }
 
 .owl-carousel.home-slider-loop-false .owl-dots .owl-dot.active span {
@@ -983,7 +982,7 @@ textarea.form-control {
   margin: 0;
   border-radius: 50% !important;
   font-size: 16px;
-  background: #fdb44b;
+  background: #32CD32;
   color: #fff;
 }
 
@@ -1029,13 +1028,13 @@ textarea.form-control {
 }
 
 .cover_1 .img_bg, .cover_1 .img_bg > .container > .row {
-  min-height: 700px;
-  height: 100vh;
+  min-height: 400px;
+  height: 40vh;
 }
 
 .cover_1.cover_sm .img_bg, .cover_1.cover_sm .img_bg > .container > .row {
-  min-height: 600px;
-  height: 80vh;
+  min-height: 400px;
+  height: 40vh;
 }
 
 .cover_1 .sub-heading {
@@ -1131,7 +1130,7 @@ textarea.form-control {
 
 .menus .item .text .price {
   font-size: 30px;
-  color: #fdb44b;
+  color: #32CD32;
   opacity: 1;
 }
 
@@ -1192,7 +1191,7 @@ textarea.form-control {
 }
 
 .accordion .btn-block[aria-expanded="true"] {
-  color: #fdb44b;
+  color: #32CD32;
 }
 
 .accordion .btn-block[aria-expanded="true"] .icon:before {

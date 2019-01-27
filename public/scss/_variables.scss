@@ -45,7 +45,7 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #5AC8D8 !default;
 
-$primary: #fdb44b !default;
+$primary: #32CD32 !default;
 
 $colors: () !default;
 $colors: map-merge((
@@ -139,9 +139,9 @@ $body-color:                $gray-900 !default;
 //
 // Style anchor elements.
 
-$link-color:                theme-color("primary") !default;
+$link-color:                #32CD32 !default;
 $link-decoration:           none !default;
-$link-hover-color:          darken($link-color, 15%) !default;
+$link-hover-color:          darken(#32CD32, 15%) !default;
 $link-hover-decoration:     underline !default;
 
 // Paragraphs

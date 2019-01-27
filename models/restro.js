@@ -12,10 +12,12 @@ const restroSchema = mongoose.Schema({
         name:{type:String, unique:true},
         type: {type:String, unique:true},
         price: {type:String,unique:true},
-        rating:{type:String,unique:true},
-        image:{type:String,unique:true}
+        image:{type:String,unique:true},
+        SFBUID: {type: String, unique: true}
     }],
-    speciality: {type:String, unique:true}
+    types: [{
+        name: {type:String, unique: true}
+    }]
 });
 
 module.exports = mongoose.model('restro', restroSchema);

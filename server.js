@@ -12,7 +12,7 @@ const flash = require('connect-flash');
 const passport = require('passport');
 
 
-container.resolve(function (_, users) {
+container.resolve(function (_, users, admin, search) {
 
     mongoose.Promise = global.Promise;
     mongoose.connect('mongodb://localhost/hb');
@@ -21,13 +21,15 @@ container.resolve(function (_, users) {
     function SetupExpress() {
         const app = express();
         const server = http.createServer(app);
-        server.listen(process.env.PORT || 3000,function () {
-            console.log("Server started on port 3000!!!");
+        server.listen(process.env.PORT || 4000,function () {
+            console.log("Server started on port 4000!!!");
         });
         ConfigureExpress(app);
         //Setup Router
         const router = require('express-promise-router')();
         users.SetRouting(router);
+        admin.SetRouting(router);
+        search.SetRouting(router);
         app.use(router);
     }
 

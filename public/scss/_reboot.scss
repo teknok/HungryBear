@@ -176,13 +176,12 @@ sup { top: -.5em; }
 //
 
 a {
-  color: $link-color;
-  text-decoration: $link-decoration;
+  color: #32CD32;
   background-color: transparent; // Remove the gray background on active links in IE 10.
   -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
 
   @include hover {
-    color: $link-hover-color;
+    color: #32CD32;
     text-decoration: $link-hover-decoration;
   }
 }
@@ -194,11 +193,11 @@ a {
 // See https://github.com/twbs/bootstrap/issues/19402
 
 a:not([href]):not([tabindex]) {
-  color: inherit;
+  color: #32CD32;
   text-decoration: none;
 
   @include hover-focus {
-    color: inherit;
+    color: #32CD32;
     text-decoration: none;
   }
 

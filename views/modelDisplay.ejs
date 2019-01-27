@@ -1,0 +1,40 @@
+<script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.3.0.js"></script>
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+<iframe src="" id="api-frame" allow="autoplay; fullscreen; vr" width="100%" height="100%" allowvr allowfullscreen mozallowfullscreen="true"
+    webkitallowfullscreen="true"></iframe>
+    <script type="text/javascript">
+        var iframe = document.getElementById('api-frame');
+        var urlid = '<%=SFBUID%>';
+        console.log('<%=SFBUID%>')
+        var client = new Sketchfab(iframe);
+        client.init(urlid, {
+          success: function onSuccess(api) {
+            api.start();
+            api.addEventListener('viewerready', function () {
+              console.log('Viewer is ready');
+
+            });
+          },
+          error: function onError() {
+            console.log('Viewer error');
+          }
+        });
+
+      </script>
+
+<!-- 
+<div class="col-md-12">
+    <form action="/results" method="post">
+        <div class="form-group ad-30" style="margin-top:8px;">
+            <div class="input-group search-style">
+                <input class="form-control new-search-bar" name="country" id="search" placeholder="Enter Your item Name" type="text">
+                <input class="form-control new-search-bar" name="city" id="search" placeholder="Enter Your Club Name" type="text">
+
+                <span class="input-group-btn">
+                    <button class="btn input-btn" type="" id="search-form">Search</button>
+                </span>
+            </div>
+        </div>
+    </form>
+</div> -->
